@@ -1,3 +1,3 @@
-# Introduction to hello-world
+# Introduction
 
-TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)
+This repository is for write a generic guide and first steps in the language.

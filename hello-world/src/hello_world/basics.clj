@@ -1,4 +1,4 @@
-(ns clojure-first.basics)
+(ns hello-world.basics)
 
 ;;; for bind values to names, the scope is local
 

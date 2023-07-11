@@ -29,3 +29,14 @@
 
 (my-range 0 5 1)
 (my-range 0 10 2)
+
+(defn my-repeat [elem times]
+  (loop [e elem
+         t times
+         acc []]
+    (if (zero? t)
+      acc
+      (recur e (dec t) (conj acc e)))))
+
+(repeat 3 20)
+(repeat "x" 5)

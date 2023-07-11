@@ -38,5 +38,16 @@
       acc
       (recur e (dec t) (conj acc e)))))
 
-(repeat 3 20)
-(repeat "x" 5)
+(my-repeat 3 20)
+(my-repeat "x" 5)
+
+(defn my-reverse [coll]
+  (loop
+      [icoll coll
+       acc []]
+    (if (empty? icoll)
+      acc
+      (recur (rest icoll) (cons (first icoll) acc)))))
+
+(my-reverse '(my-range 0 10 1))
+(my-reverse "abc")

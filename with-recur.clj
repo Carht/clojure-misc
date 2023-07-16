@@ -30,6 +30,19 @@
 (my-range 0 5 1)
 (my-range 0 10 2)
 
+(defn reverse-range [start stop step]
+  (loop [a start
+         b stop
+         c step
+         acc []]
+    (cond (<= b a) acc
+          (< step 0) acc
+          :else (recur a (- b c) c (conj acc (- b c))))))
+
+(reverse-range 0 10 1)
+(reverse-range 0 10 -1)
+(reverse-range 10 20 3)
+
 (defn my-repeat [elem times]
   (loop [e elem
          t times
@@ -49,5 +62,5 @@
       acc
       (recur (rest icoll) (cons (first icoll) acc)))))
 
-(my-reverse '(my-range 0 10 1))
+(my-reverse (my-range 0 10 1))
 (my-reverse "abc")
